@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { JadwalPiketPageRoutingModule } from './jadwal-piket-routing.module';
+import { DepartmentPageRoutingModule } from './department-routing.module';
 
-import { JadwalPiketPage } from './jadwal-piket.page';
+import { DepartmentPage } from './department.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    JadwalPiketPageRoutingModule
+    DepartmentPageRoutingModule
   ],
-  declarations: [JadwalPiketPage]
+  declarations: [DepartmentPage]
 })
-export class JadwalPiketPageModule {}
+export class DepartmentPageModule {}

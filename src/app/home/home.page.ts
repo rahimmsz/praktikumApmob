@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../api.service';
 import { IonModal } from '@ionic/angular'; 
 import { OverlayEventDetail } from '@ionic/core/components' 
@@ -11,7 +11,7 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 
-export class HomePage {
+export class HomePage  {
 
   @ViewChild(IonModal) modal!: IonModal;
 

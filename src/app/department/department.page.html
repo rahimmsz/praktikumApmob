@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Pegawai
+      Department
     </ion-title>
     <ion-buttons slot="end">
       <ion-button id="open-modal">
@@ -30,7 +30,7 @@
               <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
             </ion-button>
           </ion-buttons>
-          <ion-title>Tambah pegawai</ion-title>
+          <ion-title>Tambah Department</ion-title>
           <ion-buttons slot="end">
             <ion-button (click)="confirm()" [strong]="true">Simpan</ion-button>
           </ion-buttons>
@@ -39,16 +39,10 @@
       <ion-content class="ion-padding">
         <ion-list lines="full">
           <ion-item>
-            <ion-input [(ngModel)]="nama" label="Nama : "></ion-input>
+            <ion-input [(ngModel)]="nama_departemen" label="Nama Department : "></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input [(ngModel)]="posisi" label="Posisi : "></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input [(ngModel)]="gaji" label="Gaji : "></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input [(ngModel)]="tanggal_masuk" label="Tanggal Masuk : " type="date"></ion-input>
+            <ion-input [(ngModel)]="lokasi" label="Lokasi : "></ion-input>
           </ion-item>
         </ion-list>
         <ion-row>
@@ -64,14 +58,16 @@
 
   <ion-list>
     <ion-list-header>
-      <ion-label>DAFTAR PEGAWAI</ion-label>
+      <ion-label>DAFTAR DEPARTMENT</ion-label>
     </ion-list-header>
-    <ion-item-sliding *ngFor="let pgw of Pegawai">
+    <ion-item-sliding *ngFor="let dpt of department">
       <ion-item>
-        <ion-label>{{pgw.nama}} </ion-label>
-        <ion-button color="success" [routerLink]="['/detail-pegawai/', pgw.id]">Detail</ion-button>
-        <ion-button color="warning" [routerLink]="['/update-pegawai/', pgw.id]">Edit</ion-button>
-        <ion-button color="danger" (click)="deletePegawai(pgw.id)">Hapus</ion-button>
+        <ion-label>
+          <h1>{{dpt.nama_departemen}}</h1>
+          <p>{{dpt.lokasi}}</p>
+          <ion-button color="warning" [routerLink]="['/update-departemen/', dpt.id]">Edit</ion-button>
+          <ion-button color="danger" (click)="deleteDepartment(dpt.id)">Hapus</ion-button>
+        </ion-label>
       </ion-item>
     </ion-item-sliding>
   </ion-list>

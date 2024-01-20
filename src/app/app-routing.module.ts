@@ -20,9 +20,13 @@ const routes: Routes = [
     loadChildren: () => import('./detail-pegawai/detail-pegawai.module').then( m => m.DetailPegawaiPageModule)
   },
   {
-    path: 'jadwal-piket',
-    loadChildren: () => import('./jadwal-piket/jadwal-piket.module').then( m => m.JadwalPiketPageModule)
+    path: 'department',
+    loadChildren: () => import('./department/department.module').then(m => m.DepartmentPageModule)
   },
+  {
+    path: 'update-departemen/:id',
+    loadChildren: () => import('./update-departemen/update-departemen.module').then( m => m.UpdateDepartemenPageModule)
+  }
 ];
 
 @NgModule({

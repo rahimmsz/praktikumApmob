@@ -67,7 +67,6 @@ export class UpdatePegawaiPage implements OnInit {
     },(error: any) => {
       console.log("Gagal", error);
     });
-
   }
 
   updatePegawai() {

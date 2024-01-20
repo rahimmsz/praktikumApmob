@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update Department</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input [(ngModel)]="nama_departemen" label="Nama Department : "></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="lokasi" label="Lokasi : "></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col>
+      <ion-button type="button" (click)="updateDepartment()" expand="full" color="primary" shape="full">
+        Ubah Department
+      </ion-button>
+      <ion-button type="button" (click)="kembali()" expand="full" color="success" shape="full">
+        Kembali
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

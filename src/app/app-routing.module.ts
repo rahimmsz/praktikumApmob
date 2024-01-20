@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'update-pegawai/:id',
+    loadChildren: () => import('./update-pegawai/update-pegawai.module').then( m => m.UpdatePegawaiPageModule)
+  },
+  {
+    path: 'detail-pegawai/:id',
+    loadChildren: () => import('./detail-pegawai/detail-pegawai.module').then( m => m.DetailPegawaiPageModule)
+  },
+  {
+    path: 'jadwal-piket',
+    loadChildren: () => import('./jadwal-piket/jadwal-piket.module').then( m => m.JadwalPiketPageModule)
+  },
 ];
 
 @NgModule({

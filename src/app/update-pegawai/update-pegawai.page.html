@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update Pegawai</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input [(ngModel)]="nama" label="Nama : "></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="posisi" label="Posisi : "></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="gaji" label="Gaji : "></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="tanggal_masuk" label="Tanggal Masuk : " type="date"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col>
+      <ion-button type="button" (click)="updatePegawai()" expand="full" color="primary" shape="full">
+        Ubah Pegawai
+      </ion-button>
+      <ion-button type="button" (click)="kembali()" expand="full" color="success" shape="full">
+        Kembali
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
